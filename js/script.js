@@ -60,4 +60,32 @@ const team = [ // array con dentro degli oggetti
     }
 
 ];
-console.log(team);
+//console.log(team);
+
+/*
+`  
+<div class="col">
+    <div class="card">
+        <div>
+            <img class="card-img-top" src="img/${teamMate.image}" alt=" ${student.nome} ${student.cognome}">
+        </div>
+        <div class="card-body">
+            <div><span>nome:</span> ${teamMate.name}</div>
+            <div><span>cognome:</span> ${teamMate.surname}</div>
+            <div><span>età:</span> ${teamMate.rolevcvcvcvcxvdx}</div>
+        </div>
+    </div>
+</div>
+`
+*/
+
+
+// ciclo che mi stampa gli oggetti dentro l'array e le relative proprietà
+for (let i = 0; i < team.length; i++){  
+    console.log(team[i]);
+    console.log('name:' + team[i].name);
+    console.log('surname:' + team[i].surname);
+    console.log('role:' + team[i].role);
+};
+
+
