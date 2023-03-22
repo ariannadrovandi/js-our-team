@@ -1,5 +1,15 @@
+.card-font{
+    font-family: 'Tienne', serif;
+}
+
 body{
     background-color: #F5F5F0;
+    color: #83714b;
+}
+
+.text-container{
+    width: 700px;
+    margin: 30px auto;
 }
 
 .ad-row{

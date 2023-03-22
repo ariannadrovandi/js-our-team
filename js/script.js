@@ -95,14 +95,13 @@ for (let i = 0; i < team.length; i++){
    const teamMate = team[i];
    const tpl = `  
    <div class="col">
-       <div class="card ad-card my-4 mx-2 border-0 rounded-0">
+       <div class="card card-font ad-card my-2 mx-2 border-0 rounded-0">
            <div>
-               <img class="card-img-top" src="img/${teamMate.image}" alt=" ${teamMate.name} ${teamMate.surname} ${teamMate.role}">
+               <img class="card-img-top border-0 rounded-0" src="img/${teamMate.image}" alt=" ${teamMate.name} ${teamMate.surname} ${teamMate.role}">
            </div>
            <div class="card-body">
-               <div><span>Name:</span> ${teamMate.name}</div>
-               <div><span>Surname:</span> ${teamMate.surname}</div>
-               <div><span>Role:</span> ${teamMate.role}</div>
+               <p class="text-center my-0 fs-5">${teamMate.name} ${teamMate.surname}</p>
+               <p class="text-center my-0 fs-6">${teamMate.role}</p>
            </div>
        </div>
    </div>
