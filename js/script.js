@@ -1,14 +1,14 @@
 /*
 Utilizzando i dati forniti, creare un array di oggetti per rappresentare 
 i membri del team.
-Ogni membro è caratterizzato dalle seguenti informazioni: nome, 
+Ogni membro è caratterizzato dalle seguenti informazioni: name, 
 ruolo e foto.
 
 MILESTONE 0:
 Creare l’array di oggetti con le informazioni fornite.
 
 MILESTONE 1:
-Stampare su console, per ogni membro del team, le informazioni di nome, 
+Stampare su console, per ogni membro del team, le informazioni di name, 
 ruolo e la stringa della foto
 
 MILESTONE 2:
@@ -67,12 +67,12 @@ const team = [ // array con dentro degli oggetti
 <div class="col">
     <div class="card">
         <div>
-            <img class="card-img-top" src="img/${teamMate.image}" alt=" ${student.nome} ${student.cognome}">
+            <img class="card-img-top" src="img/${teamMate.image}" alt=" ${teamMate.name} ${teamMate.surname}">
         </div>
         <div class="card-body">
-            <div><span>nome:</span> ${teamMate.name}</div>
-            <div><span>cognome:</span> ${teamMate.surname}</div>
-            <div><span>età:</span> ${teamMate.rolevcvcvcvcxvdx}</div>
+            <div><span>name:</span> ${teamMate.name}</div>
+            <div><span>surname:</span> ${teamMate.surname}</div>
+            <div><span>role:</span> ${teamMate.role}</div>
         </div>
     </div>
 </div>
@@ -80,7 +80,7 @@ const team = [ // array con dentro degli oggetti
 */
 
 
-// ciclo che mi stampa gli oggetti dentro l'array e le relative proprietà
+// ciclo che mi stampa gli oggetti dentro l'array e le relative proprirole
 for (let i = 0; i < team.length; i++){  
     console.log(team[i]);
     console.log('name:' + team[i].name);
@@ -88,4 +88,28 @@ for (let i = 0; i < team.length; i++){
     console.log('role:' + team[i].role);
 };
 
+// ciclo che mi stampa gli oggetti dentro la row
+const row = document.querySelector('.row');
+let rowHtml = '';
+for (let i = 0; i < team.length; i++){  
+   const teamMate = team[i];
+   const tpl = `  
+   <div class="col">
+       <div class="card ad-card my-4 mx-2 border-0 rounded-0">
+           <div>
+               <img class="card-img-top" src="img/${teamMate.image}" alt=" ${teamMate.name} ${teamMate.surname} ${teamMate.role}">
+           </div>
+           <div class="card-body">
+               <div><span>Name:</span> ${teamMate.name}</div>
+               <div><span>Surname:</span> ${teamMate.surname}</div>
+               <div><span>Role:</span> ${teamMate.role}</div>
+           </div>
+       </div>
+   </div>
+   `;
+   rowHtml += tpl;
+};
+
+console.log(rowHtml);
+row.innerHTML = rowHtml;
 

@@ -1,0 +1,12 @@
+body{
+    background-color: #F5F5F0;
+}
+
+.ad-row{
+    width: 80%;
+    margin: 30px auto;
+}
+
+.ad-card{
+    width: 300px;
+}
